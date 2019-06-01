@@ -1,0 +1,92 @@
+Overall, Matchy is a website for students to find their ideal teammates. 
+The app is deployed here: https://matchy-app.herokuapp.com/ .To get 
+started, please follow the instructions:
+
+=============== Edits of Data and New Features ===================
+Since one of our teammates dropped the course, we chose to delete the 
+chat page and focus more on the search and invitation functionalities.
+
+Users no longer need to update their status. Instead, they can create 
+project groups, waiting for others to join. Users can also choose to 
+search for other project groups and send a request to join at will. 
+
+For a specific project, the users can "quit" the project or "finish" 
+the project when the project is done. Upon finishing the project, the 
+users can rate and comment their teammates, which will then be displayed 
+on their teammates' profile pages.
+
+=============== Role of Users ===================
+The Matchy's potential users are students at university who want to 
+find ideal teammates for their course assignments and projects, or 
+simply study partners. 
+
+All users have their own profile page, showing their skills, the 
+courses they have taken, and also the comments from their past teammates.
+
+One user can start his own projects or join existing projects and 
+work with others. When the project is finished, users can rate their 
+teammates and leave comments!
+
+=============== Detailed Instructions ===================
+Proceed as normal if everything looks good on your screen. Since 
+everything is tested under the resolution 1920*1080, if anything is 
+off during the testing, please adjust accordingly.
+
+==Admin==
+Matchy only has one admin user in the data base. Log in with 
+email: admin, password:admin and you will go to the admin page. 
+(a) User Credential allows the admin to change any user's email, 
+password, rating, and year.
+(b) Stats shows some important data of Matchy.
+(c) Add Course allow the admin to add a new course to the database.
+
+==Sign Up==
+Click on sign up button and you can sign up as a regular user. 
+Fill in the form with proper user email, name, password and year. 
+If any field is invalid, a warning would show up. 
+Please keep in mind that although we put some fake user data in 
+the data base with password length less than 8 digits, we enforce 
+that when signing up, the password length must be at least 8 digits.
+
+==Log In==
+Log in with the newly signed up account or the fake users. We have 
+three fake users in the database, i.e. user:user, user1:user1, and
+user2:user2. You will be redirected to the profile page. 
+after you log in.
+
+==Profile and Account Setting==
+This profile page is very straight forward. You can add courses and
+skills to the profile. Then, click the Settings button on the right of
+nav bar and go to the account setting page, where you can reset 
+the user name, password, user's profile picture and introduction.
+
+==Projects==
+Click the Projects on the navigation bar, which shows the current 
+projects the user is working on. For each project, the user can choose
+to finish or quit the project. The difference is that quit the project 
+will just remove the user from the project, but finish a project will 
+give the user a chance to give a review on the teammates. You can always 
+choose to start your own project by clicking add project.
+
+==Search for Projects==
+Click the Find button on the navigation bar and start a new search. 
+The search result will contain all projects that match the search conditions,
+excluding the projects that the user are working on and all the finished projects. 
+The user can see profiles of each user in the group, and send an application 
+if he wants to join the group. The group creator will receive the 
+application and decide whether to accept or reject the applicant.
+(Applications are shown in the Invitation in the nav bar.)
+
+If the user input ALL for sections, it will search for all projects in all sections
+that satisfy the condition. The "project name" field is optional. All the other fields
+are required.
+
+=============== overview of the routes ===================
+Express routes are in index.js. The file is commented properly 
+so you can take a look at that. Basically we have many routes for 
+different purposes. For example, we have app.get('/dashboard') to 
+route the dashboard page, app.get('/users/logout') to destroy the 
+session and log out the user, app.patch('/user/:email/:name/:year/:rating') 
+to change a user's profile, app.put('/addCourse') to add a new course to 
+the user's profile... Nearly all routes in the index.js are commented 
+so please refer to that for detailed information.

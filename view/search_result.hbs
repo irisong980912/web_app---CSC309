@@ -1,0 +1,120 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Search For Teammate</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/styles/search_result.css">
+	<link rel="stylesheet" href="/styles/common.css">
+</head>
+
+<body class='my-bg'>
+	<!-- Navbar from bootstrap docs -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light my-nav-flow">
+		<a href="/"><img src="/images/logo/logo.png"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+			aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+				<a class="nav-item nav-link" href="/dashboard">Dashboard</a>
+				<a class="nav-item nav-link active" href="/find">Find</a>
+				<a class="nav-item nav-link" href="/projects">Projects</a>
+				<a class="nav-item nav-link" href="/invitation">Invitation</a>
+			</div>
+		</div>
+		<div class="dropdown mr-2">
+			<button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">
+				Settings
+			</button>
+			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="/account_setting">Account Settings</a>
+				<a class="dropdown-item" href="/users/logout">Log out</a>
+			</div>
+		</div>
+	</nav>
+	<div class="special-vertical-center mt-5">
+		<div class="h-100 row align-items-center justify-content-center">
+			<div id="content" class="shadow-lg p-5 mb-5 bg-white rounded col-lg-10 mt-5">
+
+				<h3 id="searchTitle">
+					Search result for "{{code}}" "{{term}}" "{{section}}" "{{name}}"
+				</h3>
+
+				<!-- For each group in the search result -->
+				{{#each results}}
+				<form class="message rounded bg-light p-3 shadow-sm result">
+
+					<a class="courseNum ">
+						<span class="courseNum">
+							<h4>{{this.course_code}}</h4>
+							<h5>{{this.term}} {{this.section}} {{this.name}}</h5> <img class="peopleIcon"
+								src="/images/logo/people.png"> : {{this.teammates.length}}
+						</span>
+					</a>
+
+					<div class="btnContainer" id="myGroup">
+						<button type="button" class="btn btn-primary text-white requestBtn unclicked"
+							onclick='sendInvitation(this, "_{{this._id}}")'>Request to Join</button>
+						<button type="button" class="btn btn-danger text-white viewBtn unclicked" data-toggle="collapse"
+							data-target="#collapseExample{{this._id}}" aria-expanded="false"
+							aria-controls="collapseExample{{this._id}}">View Teammates</button>
+					</div>
+
+
+					<div class="description">
+						<h5>Group Description</h5>
+						<p>{{this.description}}</p>
+					</div>
+
+
+					<div id="collapseExample{{this._id}}"
+						class="collapse row text-center rounded project-list-container memberInfoContainer"
+						data-parent="#myGroup">
+						<!-- display each teammate information in the group -->
+						{{#each this.teammates}}
+						<div class="member col-md-3 col-sm-6">
+							<div class="thumbnail bg-white m-2 rounded">
+								<img class="profileIcon" src="{{this.icon}}">
+								<div>
+									<span>
+										<h5>{{this.name}}</h5>
+									</span>
+									<span>
+										<h6>rating: {{this.rating}}</h6>
+									</span>
+									<button class="btn btn-primary text-white profileBtn">
+										<a style='text-decoration:none;color:white'
+											href='/find/result/profile/{{this.email}}'>View Profile</a>
+									</button>
+								</div>
+							</div>
+						</div>
+						{{/each}}
+
+					</div>
+				</form>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+<script src="/scripts/public_data.js"></script>
+<script src="/scripts/search_result.js"></script>
+
+</html>

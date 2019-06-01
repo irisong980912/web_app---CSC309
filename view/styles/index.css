@@ -1,0 +1,16 @@
+
+#content p {
+    position: center;
+    font-size: large;
+    text-decoration: underline;
+    color: grey;
+}
+
+.container {
+    text-align: center;
+    position: auto;
+} 
+
+#logo {
+	width: 50%;
+}

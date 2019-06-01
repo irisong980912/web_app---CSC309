@@ -1,0 +1,81 @@
+/* This is file containing some commonly used css attributes */
+.my-bg {
+    background-image: linear-gradient(to bottom left, #f0626a, #1da1f2);
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    background-attachment: fixed;
+}
+
+.my-nav {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.my-nav-flow {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.vertical-center {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.project-list-container {
+    display:flex; 
+    flex-wrap: wrap; 
+    padding: 24px 0;
+}
+
+.add-btn-container {
+    text-align: center;
+    margin: 24px 0;
+}
+
+.action-btn {
+    width: 120px;
+}
+
+.thumbnail {
+    padding: 12px;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+.thumbnail p {
+    height: 200px;
+}
+
+.thumbnail a {
+    margin-bottom: 12px;
+}
+
+.team-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 12px;
+}
+
+body, html {
+    height: 100%;
+}
+
+.green {
+    color: #00FF09;
+}
+
+.red {
+    color: red;
+}

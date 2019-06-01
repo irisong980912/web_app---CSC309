@@ -1,0 +1,20 @@
+.container {
+	text-align: center;
+}
+
+.form-group {
+	max-width: 500px;
+	margin: auto;
+}
+
+#logo {
+	width: 30vw;
+}
+
+input {
+    width: 25vw;
+}
+
+label {
+	float: left;
+}

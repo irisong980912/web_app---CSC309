@@ -1,0 +1,34 @@
+Matchy is a website for students to find their ideal teammates. To get started, please follow the instructions:
+
+0. Proceed as normal if everything looks good on your screen. 
+	Everything is tested under the resolution 1920*1080. So if anything is off during the testing, please adjust accordingly.
+	We will try to make it responsive if we have time in phase 2.
+
+1. Open index.html, and that would lead you to the home page.
+
+2. Click on Sign Up button and go to the signup page. We will fully implement the signup part in phase2.
+
+3. Go back to the home page and click on Login.
+Enter Email: admin, Password: admin and go to the admin page(functions not implemented yet).
+	(a) User Credential allows the admin to change the user's email and password.
+	(b) Stats shows some important date of Matchy.
+	(c) Add Course allow the admin to add a new course to the database.
+
+3. Go back to the home page and click on Login again. This time let's try login as a user. Enter Email: user, Password: user and go to the user profile page.
+	(a) The first section contains the basic info of the user, such as the icon, school, and name. Click the icon right to "Looking for teammate for CSC309". The page of change status is very straight forward and you can play with it. However, you cannot actually change the status now. Please look forward to phase2 for the full implementation. Note that a new project object is implicitly initialized after the user indicates that he's looking for teammates for a specific project.
+	(b) Go back to the profile page by clicking the Profile on the nav bar. The second section contains all the projects the user is working on. Click finish project and go to the review page. You can leave the review for your teammates here. Click Finish to go back to the profile page.
+	(c) The third section--Past Project Experience contains all the projects that the user worked on. Try to add one project to this section by fill the form and click add!
+	(d) The fourth section shows all the skills the user have.  Try to add one skill to this section by fill the form and click add!
+	(e) Last but not the least, the last section contains the reviews from previous teammates.
+
+4. Click on the drop-down menu on the top right of the page and select account setting, which will lead you to the account setting page. You can change your user name, password and school here. The browser would show an alert if the two passwords don't match.
+
+5. Click on the Find on the nav bar and go to the search page. Choose the filters (any filter you like since the next page is hard-coded) and click on Search.
+
+6. The page shows all the users that fulfill the conditions. The first button is to invite the user as your teammate(we will talk more about this later). The second button will lead you to the user profile page. 
+
+7. Click on the second button right to Rex @ UofT and go to his profile page.
+
+8. Click on Messages on the nav bar. This page shows all the messages between users. Try to type a message and send by clicking the send icon.
+
+9. Click on Invitation on the nav bar. This page shows all the invitations the user has received. The user can go to the inviter's profile page by clicking Profile left to the inviter's name. The user can also choose to accept or decline the invitation, or chat with the inviter before making the decision.

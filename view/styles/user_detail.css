@@ -1,0 +1,181 @@
+#basicInfo {
+	background-color: white;
+	/* padding: 10px; */
+	margin-top: 20px;
+	height: 260px;
+	width: 100%;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.nameInfoContainer {
+	background-color: steelblue; 
+	padding: 12px 12px 12px 180px;
+	color: #ffffff;
+	display: flex;
+	font-size: 28px;
+	height: 50%;
+}
+
+.emailContainer {
+	background-color: steelblue; 
+	padding: 12px 12px 12px 180px;
+	color: #ffffff;
+	font-size: 18px;
+	height: 50%;
+}
+
+.introContainer {
+	font-size: 18px;
+	padding: 12px 12px 12px 180px;
+	/* font-family: 'Quicksand', sans-serif; */
+}
+
+/***********************************/
+/* Personal Detail Section Styling */
+/***********************************/
+.personalDetail {
+	width: 80vw;
+	margin: auto;
+}
+
+.form-control{
+	margin-left: 15px;
+	width:90%
+}
+
+.iconContainer {
+	width:120px;
+
+}
+
+.userIcon{
+	height: 120px;
+	width: 120px;
+	margin: 0 24px;
+	border-radius: 50%;
+	float: left;
+	position: absolute; 
+	top: 70px;
+}
+
+.score{
+    font-size: 700%;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0.67em;
+    margin-right: 0;
+    font-weight: bold;
+    color :LightSalmon;
+}
+
+.starContainer{
+	display: inline-block;
+}
+
+#star{
+	height: 60px;
+	width: 60px;
+	float: left;
+}
+
+#userInfo{
+	margin-left: 1em;
+	font-size: 120%;
+	font-weight: bold;
+}
+
+#status{
+	color : Green;
+}
+
+.bulletPointContainer {
+	width: 100%;
+	padding: 12px 28px;
+}
+
+.bulletPointContainer ul {
+	padding-left: 16px;
+}
+
+.section{
+	background-color: white;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
+}
+
+#addProjectForm{
+	margin-left:30px;
+}
+
+#addSkillForm{
+	margin-left:30px;
+}
+
+.col-3 {
+	/* Might impact other field paddings */
+	padding-left: 0px;
+}
+
+.chipContainer {
+	width: 100%;
+	padding: 12px 24px;
+	text-align: left;
+	flex-wrap: wrap;
+}
+
+.skillChip {
+	border-radius: 15px;
+	border: 2px solid DimGray;
+	background-color: LavenderBlush;
+	font-size: 120%;
+    font-weight: bold;
+    color: DimGray;
+    padding: 4px 6px;
+    margin: 4px;
+    display: inline-flex;
+}
+
+.reviewContainer {
+	width: 100%;
+	padding: 12px 28px;
+	text-align: left;
+}
+
+.review {
+	font-size: 120%;
+    font-weight: bold;
+    color: DimGray;
+    text-transform: capitalize;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 6px;
+    margin-top: 6px;
+}
+
+#comments {
+	margin-bottom: 20px;
+}
+
+.title{
+	margin-top: 0.5em;
+	margin-left: 1em;
+	font-size: 200%;
+	font-weight: bold;
+}
+
+.projectName{
+	font-size: 120%;
+	font-weight: bold;
+	color:DimGray;
+}
+
+#userInfo img {
+	width: 2vw;
+}
+
+.specia-my-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}

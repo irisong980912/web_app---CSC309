@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Admin</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles/admin.css">
+	<link rel="stylesheet" href="styles/common.css">
+</head>
+
+<body class='my-bg overflow-hidden'>
+	<!-- Navbar from bootstrap docs -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light my-nav">
+		<a href="/quitAdmin"><img src="./images/logo/logo.png"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+			aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup navbarText">
+			<div class="navbar-nav mr-auto">
+				<a class="nav-item nav-link" href="/quitAdmin">Home <span class="sr-only">(current)</span></a>
+			</div>
+			<span class="ml-auto navbar-text">
+				I am Administrator!!!!!!!!
+			</span>
+
+		</div>
+	</nav>
+
+	<!-- first three divs are for visual effect -->
+	<div class="vertical-center pt-5">
+		<div class="h-100 row align-items-center justify-content-center">
+			<div id="content" class="text-center shadow-lg p-5 mb-5 bg-white rounded col-lg-10">
+				<!--This is a container for the whole page's content.-->
+				<div class="d-flex">
+					<!--This div is for the menu. -->
+					<div class="nav flex-column nav-pills mr-5" id="v-pills-tab" role="tablist"
+						aria-orientation="vertical">
+						<a class="nav-link active" id="v-pills-user-tab" data-toggle="pill" href="#v-pills-user"
+							role="tab" aria-controls="v-pills-user" aria-selected="true">User Info</a>
+						<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
+							role="tab" aria-controls="v-pills-profile" aria-selected="false">Stats</a>
+						<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
+							role="tab" aria-controls="v-pills-messages" aria-selected="false">Add Course</a>
+						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings"
+							role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+					</div>
+
+					<!--This div is for the content on the right side for each menu option-->
+					<div class="tab-content ml-5 overflow-hidden" id="v-pills-tabContent">
+						<!--Option1 user credential update-->
+						<div class="tab-pane fade show active" id="v-pills-user" role="tabpanel"
+							aria-labelledby="v-pills-user-tab">
+							<form id='search'>
+								<div class="input-group input-group-lg">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="inputGroup-sizing-lg">Email</span>
+									</div>
+									<input type="text" class="form-control" aria-label="Large"
+										aria-describedby="inputGroup-sizing-sm" name='id'>
+									<button class="btn btn-outline-success my-2 my-sm-0 ml-2"
+										type="submit">Search</button>
+								</div>
+							</form>
+							<div class="jumbotron mt-5 custom-width">
+								<form id='update'>
+									<div class="form-group">
+										<label class="float-left">Email address</label>
+										<input class="form-control" id="email" aria-describedby="emailHelp"
+											placeholder="Enter email" readonly>
+									</div>
+									<div class="form-group">
+										<label class="float-left">Password</label>
+										<input class="form-control" id="password" placeholder="Password">
+									</div>
+
+									<button type="submit" class="btn btn-primary">Submit</button>
+								</form>
+								<form id='updateinfo'>
+									<div class="form-group">
+										<label class="float-left">Name</label>
+										<input class="form-control" id="name" placeholder="Name">
+									</div>
+									<div class="form-group">
+										<label class="float-left">Year</label>
+										<input class="form-control" id="year" placeholder="Year">
+									</div>
+									<div class="form-group">
+										<label class="float-left">Rating</label>
+										<input class="form-control" id="rating" placeholder="5">
+									</div>
+									<button type="submit" class="btn btn-primary">Submit</button>
+								</form>
+							</div>
+						</div>
+						<!--Option2 website stats-->
+						<div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+							aria-labelledby="v-pills-profile-tab">
+							<div class="container d-flex flex-row">
+								<div class="card mr-5 mt-5 mb-5 card-width shadow-sm">
+									<div class="card-body">
+										<h5 class="card-title">Total Users</h5>
+										<h6 class="card-subtitle mb-2 text-muted">Congratulations</h6>
+										<h1 class="card-text"><span class="badge badge-success mt-3"
+												id='total_user'>80</span></h1>
+									</div>
+								</div>
+								<div class="card m-5 card-width shadow-sm">
+									<div class="card-body">
+										<h5 class="card-title">Total Comments</h5>
+										<h6 class="card-subtitle mb-2 text-muted">Congratulations</h6>
+										<h1 class="card-text"><span class="badge badge-success mt-3"
+												id='total_comment'>100</span></h1>
+									</div>
+								</div>
+								<div class="card m-5 card-width shadow-sm">
+									<div class="card-body">
+										<h5 class="card-title">Total Projects</h5>
+										<h6 class="card-subtitle mb-2 text-muted">Wow</h6>
+										<h1 class="card-text"><span class="badge badge-success mt-3"
+												id='total_project'>100</span></h1>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--Option3 add course-->
+						<div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+							aria-labelledby="v-pills-messages-tab">
+							<form class="form-inline my-5" id='course-form'>
+
+								<div class="form-row mx-sm-3 mb-2">
+
+									<input class="form-control m-2 custom-width-15" id="course"
+										placeholder="Course Code" required>
+									<input class="form-control m-2 custom-width-15" id="term" placeholder="Term"
+										required>
+								</div>
+								<button type="submit" class="btn btn-primary mb-2">Add</button>
+							</form>
+						</div>
+						<!--Option4 maybe useful later-->
+						<div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+							aria-labelledby="v-pills-settings-tab">
+							<h1><span class="badge badge-secondary m-5">Upcoming Settings for Future Development</span>
+								</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--load scripts-->
+	<script type="text/javascript" src="scripts/admin.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
+</body>

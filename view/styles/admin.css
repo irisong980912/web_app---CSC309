@@ -1,0 +1,12 @@
+.custom-width {
+    min-width: 60vw;
+}
+
+.card-width {
+    min-width: 15vw;
+    min-height: 20vh;
+}
+
+.custom-width-15 {
+    min-width: 15vw;
+}

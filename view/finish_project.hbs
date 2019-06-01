@@ -1,0 +1,116 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Matchy - Finish Project</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" href="/styles/common.css">
+	<link rel="stylesheet" href="/styles/finish_project.css">
+
+</head>
+
+<body class="my-bg">
+	<!-- Navbar from bootstrap docs -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light my-nav-flow">
+		<a href="/"><img src="/images/logo/logo.png"></a>
+		<button class="navbar-toggler" type="button" data-txoggle="collapse" data-target="#navbarNavAltMarkup"
+			aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+				<a class="nav-item nav-link" href="/dashboard">Dashboard</a>
+				<a class="nav-item nav-link" href="/find">Find</a>
+				<a class="nav-item nav-link active" href="/projects">Projects</a>
+				<a class="nav-item nav-link" href="/invitation">Invitation</a>
+			</div>
+		</div>
+		<div class="dropdown mr-2">
+			<button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">
+				Settings
+			</button>
+			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="/account_setting">Account Settings</a>
+				<a class="dropdown-item" href="/users/logout">Log out</a>
+			</div>
+		</div>
+	</nav>
+
+	<!-- div for the main content: input form -->
+	<div class="input_form col-md-4 pt-5 mt-5">
+		<form>
+			<h3 class="text-white">
+				Please rate your teammates
+			</h3>
+
+			{{#if empty_temmate}}
+			<h5 style='color:DarkGray;margin:auto;text-align:center'>You cannot rate yourself</h1>
+				{{/if}}
+
+				<!-- One rating form for a teammate -->
+				{{#each teammates}}
+				<div class="ratePerson rounded shadow pb-2 mb-4">
+
+					<div class="matePicContainer">
+						<img class='matePic' src="{{this.icon}}" alt="icon">
+					</div>
+
+					<div class="mateContent">
+						<h4 class="textContent">{{this.name}} <span class="grey">{{this.email}}</span> </h4>
+
+						<div class="form-group">
+							<label for="min_rating">
+								<h6>Please give a score between 1 and 5</h6>
+							</label>
+							<input class="form-control-range min_rating_input" type="range" min="0" max="5" step="1"
+								value="0" />
+							your rating: <output class="min_rating_v" for="min_rating">0</output>
+						</div>
+
+						<div class="form-group">
+							<label for="exampleFormControlTextarea1">
+								<h6>Comment your teammate</h6>
+							</label>
+							<textarea class="form-control message" id="exampleFormControlTextarea1" rows="3"
+								placeholder="write a message..."></textarea>
+						</div>
+
+						<div class="form-group">
+							<div class="comment">
+								<input type="checkbox" class="form-check-input check" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">comment anonymously</label>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				{{/each}}
+
+				<!-- buttons for submit and reset -->
+				<div id="buttonsContainer">
+					<a href="/projects" class="previous">&laquo; Back to previous page</a>
+					<button type="submit" class="btn btn-primary text-white"
+						onclick="save_comment(event)">Finsh</button>
+					<button type="reset" class="btn btn-primary text-white">Clear</button>
+
+				</div>
+
+		</form>
+	</div>
+	<script src="/scripts/public_data.js"></script>
+	<script src="/scripts/finish_project.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
+</body>
+
+</html>

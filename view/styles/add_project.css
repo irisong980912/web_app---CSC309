@@ -1,0 +1,101 @@
+body {
+	background-color: #e6ecf0;
+	margin: 0;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	overflow-x: hidden;
+}
+
+#header {
+	padding: 5px;
+	background-color: white;
+}
+
+/* used to centre the objects */
+.special-vertical-center {
+	min-height: 100vh;
+	min-width: 100vh;
+    align-items: center;
+}
+
+.input_form{
+	margin-left: 20%;
+	margin-right: 20%;
+
+}
+
+.collapseOne{
+	margin-top:35px;
+}
+
+.textContent {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	width: 80%;
+}
+
+/* style for each course section */
+.course {
+	border-top: 10px solid #e6ecf0;
+	background-color: white;
+	overflow: auto;
+	width: 620px;
+}
+
+.courseTitleContainer {
+	margin: 10px;
+	border-bottom: 1px solid #e6ecf0;
+	height: 40px;
+}
+
+.courseList {
+	margin: 10px;
+	font-size: 20px;
+}
+
+.courseTitleContainer button {
+	float:right;
+}
+
+/* style for the contents within each course section */
+.courseContent {
+	margin-top: 15px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 15px;
+}
+
+/* style for sections inside the contents within each course section */
+.content {
+	margin: 10px;
+	width: 80%;
+}
+
+/* style for the buttons */
+#buttonsContainer {
+	padding-top: 20px;
+	margin-left: 40%;
+}
+
+#buttonsContainer button {
+	margin: 5px;
+}
+
+#courseListBtn {
+	margin-top: 10px;
+	width: 620px;
+}
+
+#courseListBtn img {
+	width: 15px;
+}
+
+.previous {
+	margin-top: 20px;
+	float: right;
+
+}
+
+.red {
+    color: red;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/signup.css">
+    <link rel="stylesheet" href="styles/common.css">
+</head>
+
+<body class=' my-bg overflow-hidden'>
+    <!-- Navbar from bootstrap docs -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light my-nav-flow">
+        <a href="/"><img src="./images/logo/logo.png" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="/dashboard">Dashboard</a>
+                <a class="nav-item nav-link" href="/find">Find</a>
+                <a class="nav-item nav-link" href="/projects">Projects</a>
+                <a class="nav-item nav-link" href="/invitation">Invitation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!--Actual content-->
+    <div class="vertical-center pt-5">
+        <div class="h-100 row align-items-center justify-content-center">
+            <div id="content" class="text-center shadow-lg p-5 mb-5 bg-white rounded col-lg-10">
+                <img id="logo" src="./images/logo/croped_logo.png">
+                <p>Your partner is waiting for you</p>
+                <div class="d-flex justify-content-center align-items-center">
+                    <form id="signup">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" required>
+
+                        <label for="psw">Password</label>
+                        <input type="password" name="psw" required>
+
+                        <label for="psw-repeat">Repeat Password</label>
+                        <input type="password" name="psw-repeat" required>
+
+                        <label for="name">Name</label>
+                        <input type="text" name="name" required>
+
+                        <label for="year">Year (1, or 2, or 3 ...)</label>
+                        <input type="text" name="year" required>
+                        
+                        <button id="join" type="submit" class="mt-4 mr-2 btn btn-primary">Join us</button></a>
+                        <a href="login.html"><button type="button"
+                                class="btn btn-secondary  ml-2 mt-4">login</button></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="scripts/signup.js"></script>
+</body>
